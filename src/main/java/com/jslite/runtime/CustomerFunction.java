@@ -10,10 +10,19 @@ import com.jslite.ast.Statement;
 
 public class CustomerFunction extends Function
 {
+	/**
+	 * 闭包环境
+	 */
 	private ScopeNode closure;
 
+	/**
+	 * 参数列表
+	 */
 	private Identifier[] argumentList;
 
+	/**
+	 * 函数体
+	 */
 	private Statement[] bodyStatements;
 
 	public CustomerFunction(ScopeNode closure, Identifier[] argumentList, Statement[] bodyStatements)
@@ -46,6 +55,7 @@ public class CustomerFunction extends Function
 				case NOTHING:
 					continue;
 				case RETURN:
+					Status.leaveFunction();
 					return action.returnValue;
 				case BREAK:
 					$.error("break outside loop");

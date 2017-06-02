@@ -1,7 +1,6 @@
 package com.jslite.runtime;
 
 import com.jslite.$;
-import com.jslite.ast.Node;
 import com.jslite.ast.Statement;
 import com.jslite.ast.StatementList;
 import com.jslite.parser.JSLiteLexer;

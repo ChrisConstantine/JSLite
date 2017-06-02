@@ -18,13 +18,6 @@ public interface JSLiteVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDecimalLiteralExp(JSLiteParser.DecimalLiteralExpContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code l2BinaryExp}
-	 * labeled alternative in {@link JSLiteParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitL2BinaryExp(JSLiteParser.L2BinaryExpContext ctx);
-	/**
 	 * Visit a parse tree produced by the {@code stringLiteralExp}
 	 * labeled alternative in {@link JSLiteParser#expression}.
 	 * @param ctx the parse tree
@@ -39,26 +32,12 @@ public interface JSLiteVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitParenthesesExp(JSLiteParser.ParenthesesExpContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code integerLiteralExp}
-	 * labeled alternative in {@link JSLiteParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitIntegerLiteralExp(JSLiteParser.IntegerLiteralExpContext ctx);
-	/**
 	 * Visit a parse tree produced by the {@code notExpression}
 	 * labeled alternative in {@link JSLiteParser#expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitNotExpression(JSLiteParser.NotExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code l3BinaryExp}
-	 * labeled alternative in {@link JSLiteParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitL3BinaryExp(JSLiteParser.L3BinaryExpContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code l1BinaryExp}
 	 * labeled alternative in {@link JSLiteParser#expression}.
@@ -81,6 +60,34 @@ public interface JSLiteVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitL4BinaryExp(JSLiteParser.L4BinaryExpContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code l2BinaryExp}
+	 * labeled alternative in {@link JSLiteParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitL2BinaryExp(JSLiteParser.L2BinaryExpContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code integerLiteralExp}
+	 * labeled alternative in {@link JSLiteParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIntegerLiteralExp(JSLiteParser.IntegerLiteralExpContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code lambdaExpr}
+	 * labeled alternative in {@link JSLiteParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLambdaExpr(JSLiteParser.LambdaExprContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code l3BinaryExp}
+	 * labeled alternative in {@link JSLiteParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitL3BinaryExp(JSLiteParser.L3BinaryExpContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code identifierLiteralExp}
 	 * labeled alternative in {@link JSLiteParser#expression}.
 	 * @param ctx the parse tree
@@ -94,6 +101,12 @@ public interface JSLiteVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitBooleanLiteral(JSLiteParser.BooleanLiteralContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link JSLiteParser#lambdaExpression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLambdaExpression(JSLiteParser.LambdaExpressionContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link JSLiteParser#start}.
 	 * @param ctx the parse tree
@@ -160,6 +173,12 @@ public interface JSLiteVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitBreakStatement(JSLiteParser.BreakStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link JSLiteParser#continueStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitContinueStatement(JSLiteParser.ContinueStatementContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link JSLiteParser#callStatement}.
 	 * @param ctx the parse tree

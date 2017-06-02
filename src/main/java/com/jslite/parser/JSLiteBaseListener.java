@@ -28,18 +28,6 @@ public class JSLiteBaseListener implements JSLiteListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterL2BinaryExp(JSLiteParser.L2BinaryExpContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitL2BinaryExp(JSLiteParser.L2BinaryExpContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterStringLiteralExp(JSLiteParser.StringLiteralExpContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -64,18 +52,6 @@ public class JSLiteBaseListener implements JSLiteListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIntegerLiteralExp(JSLiteParser.IntegerLiteralExpContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitIntegerLiteralExp(JSLiteParser.IntegerLiteralExpContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterNotExpression(JSLiteParser.NotExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -83,18 +59,6 @@ public class JSLiteBaseListener implements JSLiteListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitNotExpression(JSLiteParser.NotExpressionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterL3BinaryExp(JSLiteParser.L3BinaryExpContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitL3BinaryExp(JSLiteParser.L3BinaryExpContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -136,6 +100,54 @@ public class JSLiteBaseListener implements JSLiteListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterL2BinaryExp(JSLiteParser.L2BinaryExpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitL2BinaryExp(JSLiteParser.L2BinaryExpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIntegerLiteralExp(JSLiteParser.IntegerLiteralExpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIntegerLiteralExp(JSLiteParser.IntegerLiteralExpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLambdaExpr(JSLiteParser.LambdaExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLambdaExpr(JSLiteParser.LambdaExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterL3BinaryExp(JSLiteParser.L3BinaryExpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitL3BinaryExp(JSLiteParser.L3BinaryExpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterIdentifierLiteralExp(JSLiteParser.IdentifierLiteralExpContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -155,6 +167,18 @@ public class JSLiteBaseListener implements JSLiteListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBooleanLiteral(JSLiteParser.BooleanLiteralContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLambdaExpression(JSLiteParser.LambdaExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLambdaExpression(JSLiteParser.LambdaExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -287,6 +311,18 @@ public class JSLiteBaseListener implements JSLiteListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBreakStatement(JSLiteParser.BreakStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterContinueStatement(JSLiteParser.ContinueStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitContinueStatement(JSLiteParser.ContinueStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

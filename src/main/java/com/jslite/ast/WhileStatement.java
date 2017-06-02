@@ -52,8 +52,10 @@ public class WhileStatement extends Statement
 				case NOTHING:
 					break;
 				case RETURN:
+					Status.leaveLoop();
 					return Action.RETURN;
 				case BREAK:
+					Status.leaveLoop();
 					return Action.NOTHING;
 				case CONTINUE:
 					continue;

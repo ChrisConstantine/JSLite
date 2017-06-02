@@ -12,13 +12,19 @@ import java.util.Map;
 
 public class ScopeNode
 {
+	/**
+	 * 当前作用域内的变量和值
+	 */
 	private Map<Identifier,Object> scope=new HashMap<Identifier, Object>();
 
-	private ScopeNode nextScope=null;
+	/**
+	 * 父作用域
+	 */
+	private ScopeNode parentScope =null;
 
-	public ScopeNode(ScopeNode nextScope)
+	public ScopeNode(ScopeNode parentScope)
 	{
-		this.nextScope = nextScope;
+		this.parentScope = parentScope;
 	}
 
 	public Object lookUp(Identifier identifier)
@@ -30,7 +36,7 @@ public class ScopeNode
 			if(current.scope.containsKey(identifier))
 				return current.scope.get(identifier);
 			else
-				current=current.nextScope;
+				current=current.parentScope;
 		}
 
 		return null;
@@ -38,7 +44,10 @@ public class ScopeNode
 
 	public void add(Identifier identifier,Object value)
 	{
-		scope.put(identifier,value);
+		if(scope.containsKey(identifier))
+			$.die("identifier "+identifier+" already existed");
+		else
+			scope.put(identifier,value);
 	}
 
 	public void set(Identifier identifier,Object value)
@@ -53,10 +62,9 @@ public class ScopeNode
 				return;
 			}
 			else
-				current=current.nextScope;
+				current=current.parentScope;
 		}
 
-		$.error("can not resolve symbol "+identifier);
-		$.die();
+		$.die("can not resolve symbol "+identifier);
 	}
 }

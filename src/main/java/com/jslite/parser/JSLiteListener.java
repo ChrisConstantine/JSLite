@@ -20,18 +20,6 @@ public interface JSLiteListener extends ParseTreeListener {
 	 */
 	void exitDecimalLiteralExp(JSLiteParser.DecimalLiteralExpContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code l2BinaryExp}
-	 * labeled alternative in {@link JSLiteParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterL2BinaryExp(JSLiteParser.L2BinaryExpContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code l2BinaryExp}
-	 * labeled alternative in {@link JSLiteParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitL2BinaryExp(JSLiteParser.L2BinaryExpContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code stringLiteralExp}
 	 * labeled alternative in {@link JSLiteParser#expression}.
 	 * @param ctx the parse tree
@@ -56,18 +44,6 @@ public interface JSLiteListener extends ParseTreeListener {
 	 */
 	void exitParenthesesExp(JSLiteParser.ParenthesesExpContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code integerLiteralExp}
-	 * labeled alternative in {@link JSLiteParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterIntegerLiteralExp(JSLiteParser.IntegerLiteralExpContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code integerLiteralExp}
-	 * labeled alternative in {@link JSLiteParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitIntegerLiteralExp(JSLiteParser.IntegerLiteralExpContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code notExpression}
 	 * labeled alternative in {@link JSLiteParser#expression}.
 	 * @param ctx the parse tree
@@ -79,18 +55,6 @@ public interface JSLiteListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitNotExpression(JSLiteParser.NotExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code l3BinaryExp}
-	 * labeled alternative in {@link JSLiteParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterL3BinaryExp(JSLiteParser.L3BinaryExpContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code l3BinaryExp}
-	 * labeled alternative in {@link JSLiteParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitL3BinaryExp(JSLiteParser.L3BinaryExpContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code l1BinaryExp}
 	 * labeled alternative in {@link JSLiteParser#expression}.
@@ -128,6 +92,54 @@ public interface JSLiteListener extends ParseTreeListener {
 	 */
 	void exitL4BinaryExp(JSLiteParser.L4BinaryExpContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code l2BinaryExp}
+	 * labeled alternative in {@link JSLiteParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterL2BinaryExp(JSLiteParser.L2BinaryExpContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code l2BinaryExp}
+	 * labeled alternative in {@link JSLiteParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitL2BinaryExp(JSLiteParser.L2BinaryExpContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code integerLiteralExp}
+	 * labeled alternative in {@link JSLiteParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterIntegerLiteralExp(JSLiteParser.IntegerLiteralExpContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code integerLiteralExp}
+	 * labeled alternative in {@link JSLiteParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitIntegerLiteralExp(JSLiteParser.IntegerLiteralExpContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code lambdaExpr}
+	 * labeled alternative in {@link JSLiteParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterLambdaExpr(JSLiteParser.LambdaExprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code lambdaExpr}
+	 * labeled alternative in {@link JSLiteParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitLambdaExpr(JSLiteParser.LambdaExprContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code l3BinaryExp}
+	 * labeled alternative in {@link JSLiteParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterL3BinaryExp(JSLiteParser.L3BinaryExpContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code l3BinaryExp}
+	 * labeled alternative in {@link JSLiteParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitL3BinaryExp(JSLiteParser.L3BinaryExpContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code identifierLiteralExp}
 	 * labeled alternative in {@link JSLiteParser#expression}.
 	 * @param ctx the parse tree
@@ -151,6 +163,16 @@ public interface JSLiteListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBooleanLiteral(JSLiteParser.BooleanLiteralContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link JSLiteParser#lambdaExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterLambdaExpression(JSLiteParser.LambdaExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link JSLiteParser#lambdaExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitLambdaExpression(JSLiteParser.LambdaExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link JSLiteParser#start}.
 	 * @param ctx the parse tree
@@ -261,6 +283,16 @@ public interface JSLiteListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBreakStatement(JSLiteParser.BreakStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link JSLiteParser#continueStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterContinueStatement(JSLiteParser.ContinueStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link JSLiteParser#continueStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitContinueStatement(JSLiteParser.ContinueStatementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link JSLiteParser#callStatement}.
 	 * @param ctx the parse tree

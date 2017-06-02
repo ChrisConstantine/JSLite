@@ -1,6 +1,5 @@
 package com.jslite.ast;
 
-import com.jslite.$;
 import com.jslite.runtime.Compute;
 import com.jslite.runtime.ScopeNode;
 

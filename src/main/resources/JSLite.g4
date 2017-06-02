@@ -13,7 +13,8 @@ ELSE            :       'else';
 WHILE           :       'while';
 TRUE            :       'true';
 FALSE           :       'false';
-
+CONTINUE        :       'continue';
+LAMBDA          :       'lambda';
 
 ASSIGN          :       '=';
 COMMA           :       ',';
@@ -44,7 +45,10 @@ expression      :       LP expression RP            #parenthesesExp
 				|       expression op=('<' | '>' | '<=' | '>=' | '==' | '!=' ) expression #l3BinaryExp
 				|       expression op=('&&' | '||' ) expression #l4BinaryExp
 				|       call                        #callExp
+				|       lambdaExpression            #lambdaExpr
 				;
+
+lambdaExpression:      LAMBDA LP argumentList RP LBRACE functionBody RBRACE;
 
 start           :   statement*;
 
@@ -57,7 +61,8 @@ statement       :   variableDefinitionsStatement
 				|   blockStatement
 				|   ifStatement
 				|   whileStatement
-				|   breakStatement;
+				|   breakStatement
+				|   continueStatement;
 
 variableDefinitionsStatement  :       VAR variableDefinition (COMMA variableDefinition)* SEMICOMMA;
 variableDefinition      :       Identifier  (ASSIGN  expression)?;
@@ -78,9 +83,12 @@ returnStatement         :  RETURN expression? SEMICOMMA;
 
 breakStatement          :   BREAK SEMICOMMA;
 
+continueStatement       :   CONTINUE SEMICOMMA;
+
 callStatement           :   call SEMICOMMA;
 
 call                    :   Identifier LP callArgumentList RP;
+
 callArgumentList        :
 						|   expression (COMMA expression)*;
 

@@ -1,7 +1,6 @@
 package com.jslite.parser;
 
 import com.jslite.ast.*;
-import jdk.nashorn.internal.parser.Token;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 import java.util.List;
@@ -300,8 +299,32 @@ public class JSLiteVisitorImpl extends JSLiteBaseVisitor<Node>
 	}
 
 	@Override
+	public Node visitContinueStatement(JSLiteParser.ContinueStatementContext ctx)
+	{
+		return new ContinueStatement();
+	}
+
+	@Override
 	public Node visitBreakStatement(JSLiteParser.BreakStatementContext ctx)
 	{
 		return new BreakStatement();
+	}
+
+
+	@Override
+	public Node visitLambdaExpr(JSLiteParser.LambdaExprContext ctx)
+	{
+		return visit(ctx.lambdaExpression());
+	}
+
+	@Override
+	public Node visitLambdaExpression(JSLiteParser.LambdaExpressionContext ctx)
+	{
+		ArgumentList argumentList= (ArgumentList) visit(ctx.argumentList());
+
+		FunctionBody functionBody= (FunctionBody) visit(ctx.functionBody());
+
+
+		return new LambdaExpression(argumentList.getArguments(),functionBody.getStatements());
 	}
 }

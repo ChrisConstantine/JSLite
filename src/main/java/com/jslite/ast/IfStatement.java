@@ -3,7 +3,6 @@ package com.jslite.ast;
 import com.jslite.$;
 import com.jslite.runtime.Action;
 import com.jslite.runtime.ScopeNode;
-import com.jslite.runtime.Status;
 
 /**
  * Created by Constantine on 2017-05-21 0021.

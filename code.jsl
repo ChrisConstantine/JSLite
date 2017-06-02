@@ -1,11 +1,45 @@
+
+var x=1;
+
+def foo()
+{
+	var x=2;
+	def bar()
+	{
+		return x;
+	}
+}
+
+println(x);
+var f=foo();
+println(f());
+
+
+
+
+
+
+
+
+
+
 var i=0;
 
+var a1,a2,a3;
 
-
-while(i<100)
+while(i<3)
 {
-	if(i%2!=0)
-		continue;
+	if(i==1)
+		a1=lambda(){return i;};
+	else if(i==2)
+		a2=lambda(){return i;};
+	else
+		a3=lambda(){return i;};
 
-	print(i+",");
+	i=i+1;
 }
+
+println(a1());
+println(a2());
+println(a3());
+
